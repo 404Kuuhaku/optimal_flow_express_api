@@ -1,0 +1,38 @@
+version: "3.8"
+services:
+    mongodb:
+        image: mongo
+        container_name: optimal_flow_express_mongodb_container
+        ports:
+            - "27017:27017"
+        restart: always
+        environment:
+            MONGO_INITDB_ROOT_USERNAME: admin
+            MONGO_INITDB_ROOT_PASSWORD: password
+            TZ: Asia/Bangkok
+        volumes:
+            - mongodb_data:/data/db
+
+    api:
+        build: . 
+        container_name: optimal_flow_express_api_container 
+        ports:
+            - "3000:3000" 
+        depends_on:
+            - mongodb 
+        environment:
+
+            MONGODB_URI: mongodb://admin:password@mongodb:27017/optimal_flow_express?authSource=admin 
+            PORT: 3000
+            NODE_ENV: development 
+            JWT_SECRET: xNW89mNiHVAVjKMLIC1p8rUsdY7avzGR
+            TZ: Asia/Bangkok 
+        volumes:
+            - .:/app
+            - /app/node_modules 
+        command: npm run dev  
+        restart: always 
+
+volumes:
+    mongodb_data:
+        driver: local

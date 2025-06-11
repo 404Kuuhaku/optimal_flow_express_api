@@ -1,0 +1,52 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+.npm/
+.yarn/
+.pnpm-store/
+
+# TypeScript compilation output
+/dist/      # Compiled JavaScript files and sourcemaps
+
+# Environment variables
+.env        # Contains sensitive information like database URIs, API keys, etc.
+
+# VS Code specific files
+.vscode/
+.vscode-test/
+
+# Mac OS specific files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume mounted in Docker
+.dockerignore # While .dockerignore itself is not usually ignored, sometimes it's outside the context if using special Docker setups. Better be explicit if unsure.
+Dockerfile.bak # Example of temporary build files
+
+# Common OS/Editor Temporary Files
+*~
+.#*
+.idea/ # IntelliJ IDEA project files
+.project
+.classpath
+.settings/
+*.iml
+*.iws
+*.ipr
+*.sublime-project
+*.sublime-workspace
+
+# Testing output (if any are generated)
+/coverage/
+.nyc_output/
+
+# Docker specific files
+# docker-compose.override.yml # If you have a local override, you might ignore it
+# *.env # If you name your env files like .env.development, .env.production etc.
