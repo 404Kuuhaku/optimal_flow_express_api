@@ -22,7 +22,7 @@ A RESTful API built with Express.js, TypeScript, and MongoDB for user management
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/404Kuuhaku/optimal_flow_express.git
+git clone https://github.com/404Kuuhaku/optimal_flow_express_api.git
 cd optimal_flow_express
 ```
 
