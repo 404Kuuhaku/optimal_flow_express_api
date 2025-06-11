@@ -9,10 +9,10 @@ yarn-error.log*
 .pnpm-store/
 
 # TypeScript compilation output
-/dist/      # Compiled JavaScript files and sourcemaps
+/dist/  
 
 # Environment variables
-.env        # Contains sensitive information like database URIs, API keys, etc.
+.env   
 
 # VS Code specific files
 .vscode/
@@ -27,13 +27,12 @@ yarn-error.log*
 ._*
 
 # Files that might appear in the root of a volume mounted in Docker
-.dockerignore # While .dockerignore itself is not usually ignored, sometimes it's outside the context if using special Docker setups. Better be explicit if unsure.
-Dockerfile.bak # Example of temporary build files
-
+.dockerignore 
+Dockerfile.bak 
 # Common OS/Editor Temporary Files
 *~
 .#*
-.idea/ # IntelliJ IDEA project files
+.idea/ 
 .project
 .classpath
 .settings/
